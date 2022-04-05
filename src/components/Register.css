@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.container {
+  transform: scale(0.9);
+}
+.form{
+  
+  height: 600px;
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-radius:0px 10px 10px 0px;
+  background:rgba(49, 49, 49, 0.541);
+  background:blur(20px);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  -moz-backdrop-filter: blur(8px);
+  
+}
+
+.form .title h1{
+  justify-self:start;
+  margin: 40px auto;
+  font-size:4em;
+  font-family: 'Great Vibes', cursive;
+  color: aliceblue;
+}
+.form .content{
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.form button{
+  width:100%;
+  color: aliceblue;
+  
+}
+
+.picture{
+   
+   border-radius:10px 0 0 10px;
+   background-image: url(/public/mac.jpg);
+   background-position:center ;
+   background-size: cover;
+   
+}
+
+p{
+  color: aliceblue;
+  cursor: pointer;
+
+}
+
+
+
+
+
+

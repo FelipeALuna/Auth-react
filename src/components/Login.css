@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.login .container {
+  transform: scale(0.9);
+}
+.login .form{
+  
+  height: 600px;
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-radius:0 10px 10px 0;
+  background:rgba(49, 49, 49, 0.541);
+  background:blur(20px);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    -moz-backdrop-filter: blur(8px);
+	
+  
+}
+
+.login .form .title h1{
+  justify-self:start;
+  margin: 40px auto;
+  font-size:4em;
+  font-family: 'Great Vibes', cursive;
+  color: aliceblue;
+}
+.login .form .content{
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.login .form button{
+  width:100%;
+  color: aliceblue;
+ 
+}
+
+
+.login .picture{
+   
+   border-radius:10px 0 0 10px;
+   background-image: url(/public/lg.jpg);
+   background-position:center ;
+   background-size: cover;
+   
+}
+
+p{
+  color: aliceblue;
+  cursor: pointer;
+
+}
+
+.d-grid{
+ 
+}
+@media (max-width:767px) {
+  .row{
+    justify-content: center;
+    flex-grow: 1;
+  }
+  .picture{
+    display: none;
+  }
+  .col-6{
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+  .form{
+    border-radius:10px !important;
+  }
+
+  
+
+}
+
+
+@media (max-width:151)  {
+ .title h1{
+    font-size: 10px;
+  }
+}
+
+
+
+
+
+
