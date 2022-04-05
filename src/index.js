@@ -6,12 +6,25 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import { BrowserRouter } from 'react-router-dom';
+import { transitions, positions, Provider as AlertProvider } from 'react-alert'
+import AlertTemplate from 'react-alert-template-basic-with-icons'
+
+const options = {
+
+  position: positions.TOP_RIGHT,
+  timeout: 5000,
+  offset: '30px',
+  backgroundColor: 'white',
+  transition: transitions.SCALE
+}
 
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
+    <AlertProvider template={AlertTemplate} {...options}>
       <App />
+    </AlertProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

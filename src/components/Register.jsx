@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import "./Register.css"
 import { Link } from 'react-router-dom';
 import Api from "../services/Api";
-
-
+import { useAlert } from 'react-alert'
+import { useNavigate } from 'react-router-dom';
 
 const Register = props => {
     
@@ -12,12 +12,18 @@ const Register = props => {
     const [ password , setPassword] = useState();
     const [ email , setEmail] = useState();
     const [ data , setData] = useState();
-   const registerUser= (e,name,surname,password,email)=>{
+    const alert = useAlert();
+    const navigate = useNavigate()
+    
+    const registerUser= (e,name,surname,password,email)=>{
         e.preventDefault();
         
         Api.post("/auth/register",{name,surname,password,email})
-        .then(({data})=>{console.log(data)})
-        .catch((err)=>console.log(err))
+        .then(({data})=>{
+            alert.success('Registrado com sucesso !')
+            navigate('/')
+        })
+        .catch((err)=>{alert.error('Erro no registro!')})
    }
 
     return (
